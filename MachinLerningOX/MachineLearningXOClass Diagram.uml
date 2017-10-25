@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Wm58ULlyEeeST5sVK-Fifg" name="RootElement">
+  <packagedElement xmi:type="uml:Class" xmi:id="_eQVy4LlyEeeST5sVK-Fifg" name="Game">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_s03MQLlyEeeST5sVK-Fifg" name="Attribute1">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_x7OpILlyEeeST5sVK-Fifg" name="AI">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_SkhPg7lzEeeST5sVK-Fifg" name="game" type="_eQVy4LlyEeeST5sVK-Fifg" association="_SkhPgLlzEeeST5sVK-Fifg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zV0-4LlyEeeST5sVK-Fifg" name="User">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_KDb_QrlzEeeST5sVK-Fifg" name="gui" type="_1hBrILlyEeeST5sVK-Fifg" association="_KDSOQLlzEeeST5sVK-Fifg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1hBrILlyEeeST5sVK-Fifg" name="GUI">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6QDmErlyEeeST5sVK-Fifg" name="game" type="_eQVy4LlyEeeST5sVK-Fifg" association="_6P51ELlyEeeST5sVK-Fifg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_AvsGgLl0EeeST5sVK-Fifg" name="MakeFrame"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_6P51ELlyEeeST5sVK-Fifg" memberEnd="_6QDmErlyEeeST5sVK-Fifg _6QDmE7lyEeeST5sVK-Fifg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6QDmELlyEeeST5sVK-Fifg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6QDmEblyEeeST5sVK-Fifg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_6QDmE7lyEeeST5sVK-Fifg" name="gui" type="_1hBrILlyEeeST5sVK-Fifg" association="_6P51ELlyEeeST5sVK-Fifg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_KDSOQLlzEeeST5sVK-Fifg" memberEnd="_KDb_QrlzEeeST5sVK-Fifg _KDb_Q7lzEeeST5sVK-Fifg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KDb_QLlzEeeST5sVK-Fifg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KDb_QblzEeeST5sVK-Fifg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KDb_Q7lzEeeST5sVK-Fifg" name="user" type="_zV0-4LlyEeeST5sVK-Fifg" association="_KDSOQLlzEeeST5sVK-Fifg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_SkhPgLlzEeeST5sVK-Fifg" memberEnd="_SkhPg7lzEeeST5sVK-Fifg _SkhPhLlzEeeST5sVK-Fifg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SkhPgblzEeeST5sVK-Fifg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SkhPgrlzEeeST5sVK-Fifg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_SkhPhLlzEeeST5sVK-Fifg" name="ai" type="_x7OpILlyEeeST5sVK-Fifg" association="_SkhPgLlzEeeST5sVK-Fifg"/>
+  </packagedElement>
+</uml:Model>

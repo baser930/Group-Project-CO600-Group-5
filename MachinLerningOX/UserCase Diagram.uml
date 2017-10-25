@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_NWonALJwEeeyef3xjI1Sjg" name="RootElement">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_-0dsILJxEeeyef3xjI1Sjg">
+    <body>Very abstract, the more we meet and talk about the different functionalities and technican requirements the more detailed the  diagram will be.</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Package" xmi:id="_bQc2gLJwEeeyef3xjI1Sjg" name="Machine Learning OX">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_n4k0oLJwEeeyef3xjI1Sjg" name="Insert Move"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_QU1BALJxEeeyef3xjI1Sjg" name="Start Game"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Zqa3YLJxEeeyef3xjI1Sjg" name="End Game"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_E2wU8LNSEeeJq6-9Eugs5Q" name="Learning Process">
+      <include xmi:type="uml:Include" xmi:id="_QI7MwLNSEeeJq6-9Eugs5Q" addition="_n4k0oLJwEeeyef3xjI1Sjg"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_gqCKULJwEeeyef3xjI1Sjg" name="User"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_qIj6QLJwEeeyef3xjI1Sjg" name="A.I."/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_G3YPILJxEeeyef3xjI1Sjg" memberEnd="_G4H2ALJxEeeyef3xjI1Sjg _G4H2AbJxEeeyef3xjI1Sjg" navigableOwnedEnd="_G4H2ALJxEeeyef3xjI1Sjg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_G3rKELJxEeeyef3xjI1Sjg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_G307ELJxEeeyef3xjI1Sjg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_G4H2ALJxEeeyef3xjI1Sjg" name="insert move" type="_n4k0oLJwEeeyef3xjI1Sjg" association="_G3YPILJxEeeyef3xjI1Sjg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_G4H2AbJxEeeyef3xjI1Sjg" name="a.i." type="_qIj6QLJwEeeyef3xjI1Sjg" association="_G3YPILJxEeeyef3xjI1Sjg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_HkHZULJxEeeyef3xjI1Sjg" memberEnd="_HkHZU7JxEeeyef3xjI1Sjg _HkRKULJxEeeyef3xjI1Sjg" navigableOwnedEnd="_HkHZU7JxEeeyef3xjI1Sjg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HkHZUbJxEeeyef3xjI1Sjg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HkHZUrJxEeeyef3xjI1Sjg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_HkHZU7JxEeeyef3xjI1Sjg" name="insert move" type="_n4k0oLJwEeeyef3xjI1Sjg" association="_HkHZULJxEeeyef3xjI1Sjg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_HkRKULJxEeeyef3xjI1Sjg" name="user" type="_gqCKULJwEeeyef3xjI1Sjg" association="_HkHZULJxEeeyef3xjI1Sjg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_XVLeULJxEeeyef3xjI1Sjg" memberEnd="_XVVPUrJxEeeyef3xjI1Sjg _XVVPU7JxEeeyef3xjI1Sjg" navigableOwnedEnd="_XVVPUrJxEeeyef3xjI1Sjg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XVVPULJxEeeyef3xjI1Sjg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XVVPUbJxEeeyef3xjI1Sjg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_XVVPUrJxEeeyef3xjI1Sjg" name="start game" type="_QU1BALJxEeeyef3xjI1Sjg" association="_XVLeULJxEeeyef3xjI1Sjg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_XVVPU7JxEeeyef3xjI1Sjg" name="user" type="_gqCKULJwEeeyef3xjI1Sjg" association="_XVLeULJxEeeyef3xjI1Sjg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gUimALJxEeeyef3xjI1Sjg" memberEnd="_gUimA7JxEeeyef3xjI1Sjg _gUimBLJxEeeyef3xjI1Sjg" navigableOwnedEnd="_gUimA7JxEeeyef3xjI1Sjg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gUimAbJxEeeyef3xjI1Sjg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gUimArJxEeeyef3xjI1Sjg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gUimA7JxEeeyef3xjI1Sjg" name="end game" type="_Zqa3YLJxEeeyef3xjI1Sjg" association="_gUimALJxEeeyef3xjI1Sjg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gUimBLJxEeeyef3xjI1Sjg" name="user" type="_gqCKULJwEeeyef3xjI1Sjg" association="_gUimALJxEeeyef3xjI1Sjg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ivjP4LJxEeeyef3xjI1Sjg" visibility="public" memberEnd="_ivsZ0rJxEeeyef3xjI1Sjg _ivsZ07JxEeeyef3xjI1Sjg" navigableOwnedEnd="_ivsZ0rJxEeeyef3xjI1Sjg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ivsZ0LJxEeeyef3xjI1Sjg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ivsZ0bJxEeeyef3xjI1Sjg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ivsZ0rJxEeeyef3xjI1Sjg" name="a.i." type="_qIj6QLJwEeeyef3xjI1Sjg" association="_ivjP4LJxEeeyef3xjI1Sjg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ivsZ07JxEeeyef3xjI1Sjg" name="end game" type="_Zqa3YLJxEeeyef3xjI1Sjg" association="_ivjP4LJxEeeyef3xjI1Sjg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_4astsLJxEeeyef3xjI1Sjg" memberEnd="_4a2esLJxEeeyef3xjI1Sjg _4a2esbJxEeeyef3xjI1Sjg" navigableOwnedEnd="_4a2esLJxEeeyef3xjI1Sjg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4astsbJxEeeyef3xjI1Sjg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4astsrJxEeeyef3xjI1Sjg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_4a2esLJxEeeyef3xjI1Sjg" name="a.i." type="_qIj6QLJwEeeyef3xjI1Sjg" association="_4astsLJxEeeyef3xjI1Sjg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_4a2esbJxEeeyef3xjI1Sjg" name="start game" type="_QU1BALJxEeeyef3xjI1Sjg" association="_4astsLJxEeeyef3xjI1Sjg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_L_eEELNSEeeJq6-9Eugs5Q" memberEnd="_L_6wALNSEeeJq6-9Eugs5Q _L_6wAbNSEeeJq6-9Eugs5Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_L_w_ALNSEeeJq6-9Eugs5Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_L_w_AbNSEeeJq6-9Eugs5Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_L_6wALNSEeeJq6-9Eugs5Q" name="a.i." type="_qIj6QLJwEeeyef3xjI1Sjg" association="_L_eEELNSEeeJq6-9Eugs5Q"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_L_6wAbNSEeeJq6-9Eugs5Q" name="learning process" type="_E2wU8LNSEeeJq6-9Eugs5Q" association="_L_eEELNSEeeJq6-9Eugs5Q"/>
+  </packagedElement>
+</uml:Model>
