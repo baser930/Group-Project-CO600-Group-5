@@ -11,7 +11,10 @@ package tictactoe;
  */
 abstract public class Human extends Player {
     @Override
-    void humanTurn(int h, int turn){
+    void humanMove(int h, int move){
+    //add move code
+    }
+    void humanMark(int h, int mark){
     //add move code
     } 
     
