@@ -13,7 +13,9 @@ public class Player {
     void notifyWin(int h){}
     void notifylLose(int h){}
     void notifyDraw(int h){}
-    void aiTurn(int ai, int turn){}
-    void humanTurn(int h, int turn){} 
+    void aiMove(int ai, int Move){}
+    void humanMove(int h, int Move){}
+    void aiMark(int ai, int Mark){}
+    void humanMark(int h, int Mark){} 
     
 }
