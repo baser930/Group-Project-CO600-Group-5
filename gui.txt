@@ -1,0 +1,196 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+/**
+ * This is the GUI of the game
+ * 
+ * @author (Tahmoor Ul Haq)
+ */
+public class GUI 
+    implements ActionListener
+{
+    private JFrame frame;
+    private JButton button1;
+    private JButton button2;
+    private JButton button3;
+    private JButton button4;
+    private JButton button5;
+    private JButton button6;
+    private JButton button7;
+    private JButton button8;
+    private JButton button9;
+    private TicTacToe game;
+    /**
+     * Constructor for objects of class GUI
+     */
+    public GUI()
+    {
+        makeFrame();
+        game = new TicTacToe();
+    }
+    /**
+     * makes the GUI, it makes the frame then adds in the menu and buttons
+     */
+    private void makeFrame()
+    {
+        frame = new JFrame("TIC-TAC-TOE");
+        Container contentPane = frame.getContentPane();
+        contentPane.setLayout(new GridLayout(3, 3));
+        //Make Menu
+        JMenuBar menubar = new JMenuBar();
+        frame.setJMenuBar(menubar);
+        
+        JMenu menu;
+        JMenuItem item;
+        
+        menu = new JMenu("Game");
+        menubar.add(menu);
+        
+        item = new JMenuItem("QUIT");
+        item.addActionListener(new ActionListener() 
+        {
+         public void actionPerformed(ActionEvent e) 
+         {
+             quit();
+         }
+        });
+        menu.add(item);
+        //Make Buttons
+        JButton button1 = new JButton("");
+        button1.setPreferredSize(new Dimension(100, 100));
+        button1.addActionListener(new ActionListener() 
+        {
+         public void actionPerformed(ActionEvent e) 
+         {
+             game.play();
+             button1.setText(game.getLetter());
+             game.topLeft();
+             game.checkWinner();
+             button1.setEnabled(false);
+         }
+        });
+        JButton button2 = new JButton("");
+        button2.setPreferredSize(new Dimension(100, 100));
+        button2.addActionListener(new ActionListener() 
+        {
+         public void actionPerformed(ActionEvent e) 
+         {
+             game.play();
+             button2.setText(game.getLetter());
+             game.topMiddle();
+             game.checkWinner();
+             button2.setEnabled(false);
+         }
+        });
+        JButton button3 = new JButton("");
+        button3.setPreferredSize(new Dimension(100, 100));
+        button3.addActionListener(new ActionListener() 
+        {
+         public void actionPerformed(ActionEvent e) 
+         {
+             game.play();
+             button3.setText(game.getLetter());
+             game.topRight();
+             game.checkWinner();
+             button3.setEnabled(false);
+         }
+        });
+        JButton button4 = new JButton("");
+        button4.setPreferredSize(new Dimension(100, 100));
+        button4.addActionListener(new ActionListener() 
+        {
+         public void actionPerformed(ActionEvent e) 
+         {
+             game.play();
+             button4.setText(game.getLetter());
+             game.middleLeft();
+             game.checkWinner();
+             button4.setEnabled(false);
+         }
+        });
+        JButton button5 = new JButton("");
+        button5.setPreferredSize(new Dimension(100, 100));
+        button5.addActionListener(new ActionListener() 
+        {
+         public void actionPerformed(ActionEvent e) 
+         {
+             game.play();
+             button5.setText(game.getLetter());
+             game.middleMiddle();
+             game.checkWinner();
+             button5.setEnabled(false);
+         }
+        });
+        JButton button6 = new JButton("");
+        button6.setPreferredSize(new Dimension(100, 100));
+        button6.addActionListener(new ActionListener() 
+        {
+         public void actionPerformed(ActionEvent e) 
+         {
+             game.play();
+             button6.setText(game.getLetter());
+             game.middleRight();
+             game.checkWinner();
+             button6.setEnabled(false);
+         }
+        });
+        JButton button7 = new JButton("");
+        button7.setPreferredSize(new Dimension(100, 100));
+        button7.addActionListener(new ActionListener() 
+        {
+         public void actionPerformed(ActionEvent e) 
+         {
+             game.play();
+             button7.setText(game.getLetter());
+             game.bottomLeft();
+             game.checkWinner();
+             button7.setEnabled(false);
+         }
+        });
+        JButton button8 = new JButton("");
+        button8.setPreferredSize(new Dimension(100, 100));
+        button8.addActionListener(new ActionListener() 
+        {
+         public void actionPerformed(ActionEvent e) 
+         {
+             game.play();
+             button8.setText(game.getLetter());
+             game.bottomMiddle();
+             game.checkWinner();
+             button8.setEnabled(false);
+         }
+        });
+        JButton button9 = new JButton("");
+        button9.setPreferredSize(new Dimension(100, 100));
+        button9.addActionListener(new ActionListener() 
+        {
+         public void actionPerformed(ActionEvent e) 
+         {
+             game.play();
+             button9.setText(game.getLetter());
+             game.bottomRight();
+             game.checkWinner();
+             button9.setEnabled(false);
+         }
+        });
+        
+        //Add Buttons
+        contentPane.add(button1);
+        contentPane.add(button2);
+        contentPane.add(button3);
+        contentPane.add(button4);
+        contentPane.add(button5);
+        contentPane.add(button6);
+        contentPane.add(button7);
+        contentPane.add(button8);
+        contentPane.add(button9);
+        
+        frame.pack();
+        frame.setVisible(true);
+    }
+    public void actionPerformed(ActionEvent e){}
+    public void quit()
+    {
+        System.exit(0);
+    }
+}
