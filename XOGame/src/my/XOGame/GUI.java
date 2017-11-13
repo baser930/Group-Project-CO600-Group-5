@@ -9,12 +9,12 @@ package my.XOGame;
  *
  * @author metdekaj
  */
-public class OXGame extends javax.swing.JFrame {
+public class GUI extends javax.swing.JFrame {
 
     /**
      * Creates new form OXGame
      */
-    public OXGame() {
+    public GUI() {
         initComponents();
     }
 
@@ -48,7 +48,7 @@ public class OXGame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Difficulty.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Difficulty", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+        Difficulty.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Difficulty", 2, 2));
 
         Intelligence.setText("Intelligence:");
 
@@ -93,7 +93,7 @@ public class OXGame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        Gameplay.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Machine Learning XO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+        Gameplay.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Machine Learning XO", 2, 2));
 
         javax.swing.GroupLayout GameplayLayout = new javax.swing.GroupLayout(Gameplay);
         Gameplay.setLayout(GameplayLayout);
@@ -106,7 +106,7 @@ public class OXGame extends javax.swing.JFrame {
             .addGap(0, 181, Short.MAX_VALUE)
         );
 
-        Actions.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Actions", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+        Actions.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Actions", 2, 2));
 
         JHomeButton.setText("Home");
 
@@ -160,7 +160,7 @@ public class OXGame extends javax.swing.JFrame {
                 .addComponent(JExitButton))
         );
 
-        Score.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Score", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+        Score.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Score", 2, 2));
 
         JComputerLabel.setText("Computer:");
 
@@ -207,7 +207,7 @@ public class OXGame extends javax.swing.JFrame {
                 .addGap(0, 4, Short.MAX_VALUE))
         );
 
-        Title.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Title", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+        Title.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Title", 2, 2));
 
         javax.swing.GroupLayout TitleLayout = new javax.swing.GroupLayout(Title);
         Title.setLayout(TitleLayout);
@@ -284,20 +284,21 @@ public class OXGame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(OXGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(OXGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(OXGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(OXGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new OXGame().setVisible(true);
+                new GUI().setVisible(true);
             }
         });
     }
