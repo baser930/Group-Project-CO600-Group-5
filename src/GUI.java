@@ -129,6 +129,8 @@ public class GUI extends javax.swing.JFrame {
         button8.setText("Button 1");
 
         button9.setText("Button 1");
+        
+        makeButtonsFunctional();
 
         javax.swing.GroupLayout GameplayLayout = new javax.swing.GroupLayout(Gameplay);
         Gameplay.setLayout(GameplayLayout);
