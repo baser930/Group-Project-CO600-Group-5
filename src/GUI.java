@@ -1,25 +1,24 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 /**
  *
  * @author metdekaj
  */
 public class GUI extends javax.swing.JFrame {
-
 	TicTacToe game;
     /**
-     * Creates new form OXGame
+     * Creates new form GUI
      */
     public GUI() {
+    	game = new TicTacToe();
         initComponents();
-        game = new TicTacToe();
     }
 
     /**
@@ -37,6 +36,15 @@ public class GUI extends javax.swing.JFrame {
         StartTrainingButton = new javax.swing.JButton();
         StopTrainingButon = new javax.swing.JButton();
         Gameplay = new javax.swing.JPanel();
+        button1 = new javax.swing.JButton();
+        button2 = new javax.swing.JButton();
+        button3 = new javax.swing.JButton();
+        button4 = new javax.swing.JButton();
+        button5 = new javax.swing.JButton();
+        button6 = new javax.swing.JButton();
+        button7 = new javax.swing.JButton();
+        button8 = new javax.swing.JButton();
+        button9 = new javax.swing.JButton();
         Actions = new javax.swing.JPanel();
         JHomeButton = new javax.swing.JButton();
         JPauseButton = new javax.swing.JButton();
@@ -52,7 +60,7 @@ public class GUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Difficulty.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Difficulty", 2, 2));
+        Difficulty.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Difficulty", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
 
         Intelligence.setText("Intelligence:");
 
@@ -97,22 +105,85 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        makeGameSection();
-        
-        Gameplay.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Machine Learning XO", 2, 2));
+        Gameplay.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Machine Learning XO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+
+        button1.setText("Button 1");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
+
+        button2.setText("Button 1");
+
+        button3.setText("Button 1");
+
+        button4.setText("Button 1");
+
+        button5.setText("Button 1");
+
+        button6.setText("Button 1");
+
+        button7.setText("Button 1");
+
+        button8.setText("Button 1");
+
+        button9.setText("Button 1");
 
         javax.swing.GroupLayout GameplayLayout = new javax.swing.GroupLayout(Gameplay);
         Gameplay.setLayout(GameplayLayout);
         GameplayLayout.setHorizontalGroup(
             GameplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(GameplayLayout.createSequentialGroup()
+                .addGroup(GameplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(GameplayLayout.createSequentialGroup()
+                        .addGroup(GameplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GameplayLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6))
+                            .addGroup(GameplayLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(GameplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(GameplayLayout.createSequentialGroup()
+                                .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(GameplayLayout.createSequentialGroup()
+                                .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(GameplayLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(button7, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(button9, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         GameplayLayout.setVerticalGroup(
             GameplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 181, Short.MAX_VALUE)
+            .addGroup(GameplayLayout.createSequentialGroup()
+                .addGroup(GameplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(GameplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(GameplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button7, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button9, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
-        Actions.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Actions", 2, 2));
+        Actions.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Actions", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
 
         JHomeButton.setText("Home");
 
@@ -166,7 +237,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(JExitButton))
         );
 
-        Score.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Score", 2, 2));
+        Score.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Score", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
 
         JComputerLabel.setText("Computer:");
 
@@ -198,7 +269,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(JHumanLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         ScoreLayout.setVerticalGroup(
             ScoreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,7 +284,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(0, 4, Short.MAX_VALUE))
         );
 
-        Title.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Title", 2, 2));
+        Title.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Title", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
 
         javax.swing.GroupLayout TitleLayout = new javax.swing.GroupLayout(Title);
         Title.setLayout(TitleLayout);
@@ -273,6 +344,10 @@ public class GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ResetStatsButtonActionPerformed
 
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -299,7 +374,6 @@ public class GUI extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -309,10 +383,8 @@ public class GUI extends javax.swing.JFrame {
         });
     }
     
-    public void makeGameSection(){
+    public void makeButtonsFunctional(){
     	//Make Buttons
-        JButton button1 = new JButton("");
-        button1.setPreferredSize(new Dimension(100, 100));
         button1.addActionListener(new ActionListener() 
         {
          public void actionPerformed(ActionEvent e) 
@@ -324,8 +396,6 @@ public class GUI extends javax.swing.JFrame {
              button1.setEnabled(false);
          }
         });
-        JButton button2 = new JButton("");
-        button2.setPreferredSize(new Dimension(100, 100));
         button2.addActionListener(new ActionListener() 
         {
          public void actionPerformed(ActionEvent e) 
@@ -337,8 +407,6 @@ public class GUI extends javax.swing.JFrame {
              button2.setEnabled(false);
          }
         });
-        JButton button3 = new JButton("");
-        button3.setPreferredSize(new Dimension(100, 100));
         button3.addActionListener(new ActionListener() 
         {
          public void actionPerformed(ActionEvent e) 
@@ -350,8 +418,6 @@ public class GUI extends javax.swing.JFrame {
              button3.setEnabled(false);
          }
         });
-        JButton button4 = new JButton("");
-        button4.setPreferredSize(new Dimension(100, 100));
         button4.addActionListener(new ActionListener() 
         {
          public void actionPerformed(ActionEvent e) 
@@ -363,8 +429,6 @@ public class GUI extends javax.swing.JFrame {
              button4.setEnabled(false);
          }
         });
-        JButton button5 = new JButton("");
-        button5.setPreferredSize(new Dimension(100, 100));
         button5.addActionListener(new ActionListener() 
         {
          public void actionPerformed(ActionEvent e) 
@@ -376,8 +440,6 @@ public class GUI extends javax.swing.JFrame {
              button5.setEnabled(false);
          }
         });
-        JButton button6 = new JButton("");
-        button6.setPreferredSize(new Dimension(100, 100));
         button6.addActionListener(new ActionListener() 
         {
          public void actionPerformed(ActionEvent e) 
@@ -389,8 +451,6 @@ public class GUI extends javax.swing.JFrame {
              button6.setEnabled(false);
          }
         });
-        JButton button7 = new JButton("");
-        button7.setPreferredSize(new Dimension(100, 100));
         button7.addActionListener(new ActionListener() 
         {
          public void actionPerformed(ActionEvent e) 
@@ -402,8 +462,6 @@ public class GUI extends javax.swing.JFrame {
              button7.setEnabled(false);
          }
         });
-        JButton button8 = new JButton("");
-        button8.setPreferredSize(new Dimension(100, 100));
         button8.addActionListener(new ActionListener() 
         {
          public void actionPerformed(ActionEvent e) 
@@ -415,8 +473,6 @@ public class GUI extends javax.swing.JFrame {
              button8.setEnabled(false);
          }
         });
-        JButton button9 = new JButton("");
-        button9.setPreferredSize(new Dimension(100, 100));
         button9.addActionListener(new ActionListener() 
         {
          public void actionPerformed(ActionEvent e) 
@@ -428,19 +484,6 @@ public class GUI extends javax.swing.JFrame {
              button9.setEnabled(false);
          }
         });
-        
-        //Add Buttons
-        Gameplay.add(button1);
-        Gameplay.add(button2);
-        Gameplay.add(button3);
-        Gameplay.add(button4);
-        Gameplay.add(button5);
-        Gameplay.add(button6);
-        Gameplay.add(button7);
-        Gameplay.add(button8);
-        Gameplay.add(button9);
-
-        Gameplay.setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -461,6 +504,15 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton StartTrainingButton;
     private javax.swing.JButton StopTrainingButon;
     private javax.swing.JPanel Title;
+    private javax.swing.JButton button1;
+    private javax.swing.JButton button2;
+    private javax.swing.JButton button3;
+    private javax.swing.JButton button4;
+    private javax.swing.JButton button5;
+    private javax.swing.JButton button6;
+    private javax.swing.JButton button7;
+    private javax.swing.JButton button8;
+    private javax.swing.JButton button9;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
