@@ -12,21 +12,37 @@
     var currentPlayer = 1;
     var player1 = {name:"player1", value:"X"};
     var player2 = {name:"player2", value:"O"};
+    var boardData;
+  
+    function makeArray(){
+        boardData = new Array(3);
+        for (i=0; i <3; i++){
+            boardData[i]=new Array(3);
+        }    
+    }
+    
+    function updateArray(x, y, value){
+        boardData[x,y] = value;
+    }
   
     function select(ele) {
       if(currentPlayer == 1){
       document.getElementById(ele.id).innerHTML= player1.value;
           currentPlayer = 0;
+          updateArray(ele.getAttribute("x"), ele.getAttribute("y"), player1.value);
       }
       else{
     document.getElementById(ele.id).innerHTML= player2.value;
           currentPlayer = 1;
       }
+        
     alert('Coordinates = ' + ele.getAttribute("x") + ", " + ele.getAttribute("y"));
+        alert(boardData[0,0]);
   }
 </script>
 
-    <body>
+    <body onload="makeArray()">
+        <h1>Tic Tac Toe</h1>
 <table>
     <tr>
     <td><button x="2" y="0" id="2,0" onclick="select(this);"/></td>
