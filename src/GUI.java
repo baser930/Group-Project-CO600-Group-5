@@ -129,7 +129,7 @@ public class GUI extends javax.swing.JFrame {
         button8.setText("Button 1");
         
         button9.setText("Button 1");
-        
+
         makeButtonsFunctional();
         
         javax.swing.GroupLayout GameplayLayout = new javax.swing.GroupLayout(Gameplay);
@@ -162,9 +162,9 @@ public class GUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(button9, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                        .addComponent(button9, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))));
+            			
+      
         GameplayLayout.setVerticalGroup(
             GameplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GameplayLayout.createSequentialGroup()
@@ -182,7 +182,10 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(button7, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(button9, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(78, Short.MAX_VALUE))
+                		.addComponent(button8, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+
+                		.addContainerGap(78, Short.MAX_VALUE))
+       
         );
 
         Actions.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Actions", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
@@ -486,6 +489,7 @@ public class GUI extends javax.swing.JFrame {
              button9.setEnabled(false);
          }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -515,6 +519,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton button7;
     private javax.swing.JButton button8;
     private javax.swing.JButton button9;
+    
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
