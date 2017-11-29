@@ -7,7 +7,6 @@
     var player2 = {name:"player2", value:"O"};
   
     function select(ele) {
-      //var id = ele.getAttribute("x");
       if(currentPlayer == 1){
       document.getElementById(ele.id).innerHTML= player1.value;
           currentPlayer = 0;
@@ -16,7 +15,6 @@
     document.getElementById(ele.id).innerHTML= player2.value;
           currentPlayer = 1;
       }
-      
     alert('Coordinates = ' + ele.getAttribute("x") + ", " + ele.getAttribute("y"));
   }
 </script>
