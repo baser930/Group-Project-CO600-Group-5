@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    var currentPlayer = 1;
+    var player1 = {name:"player1", value:"X"};
+    var player2 = {name:"player2", value:"O"};
+  function select(ele) {
+      var id = ele.id;
+      if(currentPlayer == 1){
+      document.getElementById(ele.id).innerHTML= player1.value;
+          currentPlayer = 0;
+      }
+      else{
+    document.getElementById(ele.id).innerHTML= player2.value;
+          currentPlayer = 1;
+      }
+      
+    alert('area element id = ' + id);
+  }
+</script>
+    </head>
+<body>
+<table>
+    <tr>
+    <td><button id="2,0" onclick="select(this);"/></td>
+    <td><button id="2,1" onclick="select(this);"/></td>
+    <td><button id="2,2" onclick="select(this);"/></td>
+    </tr>
+    <tr>
+    <td><button id="1,2" onclick="select(this);"/></td>
+    <td><button id="1,1" onclick="select(this);"/></td>
+    <td><button id="1,2" onclick="select(this);"/></td>
+    </tr>
+    <tr>
+    <td><button id="0,0" onclick="select(this);"/></td>
+    <td><button id="0,1" onclick="select(this);"/></td>
+    <td><button id="0,2" onclick="select(this);"/></td>
+    </tr>
+    </table>
+
+    </body>
+</html>
