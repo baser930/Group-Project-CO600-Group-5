@@ -34,10 +34,11 @@
       else{
     document.getElementById(ele.id).innerHTML= player2.value;
           currentPlayer = 1;
+          updateArray(ele.getAttribute("x"), ele.getAttribute("y"), player2.value);
       }
         
     alert('Coordinates = ' + ele.getAttribute("x") + ", " + ele.getAttribute("y"));
-        alert(boardData[0,0]);
+        alert(boardData[ele.getAttribute("x"),ele.getAttribute("y")]);
   }
 </script>
 
