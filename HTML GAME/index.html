@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-    
 <script>
     var currentPlayer = 1;
     var player1 = {name:"player1", value:"X"};
@@ -25,6 +24,14 @@
         boardData[x,y] = value;
     }
   
+    function printArray(){
+        for(var i = 0; i < a[i].length; i++) {
+        for(var z = 0; z < a.length; z++) {
+        console.log(a[z][i]);
+            }
+        }
+    }
+    
     function select(ele) {
       if(currentPlayer == 1){
       document.getElementById(ele.id).innerHTML= player1.value;
@@ -56,9 +63,9 @@
     <td><button x="1" y="2" id="1,2" onclick="select(this);"/></td>
     </tr>
     <tr>
-    <td><button x="0" y="0" id="0,0" onclick="select(this);"/></td>
-    <td><button x="0" y="1" id="0,1" onclick="select(this);"/></td>
-    <td><button x="0" y="2" id="0,2" onclick="select(this);"/></td>
+    <td><button x="0" y="0" id="0,0" onclick="select(this)" onclick="printArray()"/></td>
+    <td><button x="0" y="1" id="0,1" onclick="select(this)"/></td>
+    <td><button x="0" y="2" id="0,2" onclick="select(this)"/></td>
     </tr>
     </table>
 
